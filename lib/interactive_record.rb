@@ -9,16 +9,16 @@ class InteractiveRecord
   end
   
   def self.column_names
-    DB[:conn].results_as_hash = true
-    
-    sql = "pragma table_info('#{table_name}')"
-    
-    table_info = DB[:conn].execute(sql)
-    column_names = []
-    table_info.each do |row|
-      column_names << row["name"]
-    end
-    column_names.compact
+      DB[:conn].results_as_hash = true
+      
+      sql = "pragma table_info('#{table_name}')"
+      
+      table_info = DB[:conn].execute(sql)
+      column_names = []
+      table_info.each do |row|
+        column_names << row["name"]
+      end
+      column_names.compact
   end
   
   def initialize(options={})
@@ -27,5 +27,25 @@ class InteractiveRecord
     end
   end
   
+  def table_name_for_insert
+    
+  end
+  
+  def col_names_for_insert
+    
+  end
+  
+  def values_for_insert
+    
+  end
+  
+  def save
+    
+  end
+  
+  def self.find_by_name
+    
+  end
+
   
 end
