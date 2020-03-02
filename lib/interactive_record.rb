@@ -20,6 +20,7 @@ class InteractiveRecord
     column_names
   end
   
+  def initialize(options={})
   
   
 end
