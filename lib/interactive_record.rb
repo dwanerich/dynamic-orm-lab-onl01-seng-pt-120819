@@ -3,6 +3,9 @@ require 'active_support/inflector'
 
 class InteractiveRecord
   
+  def initialize(options={})
+    options.each do
+  
   def self.table_name
     self.to_s.downcase.pluralize
   end
